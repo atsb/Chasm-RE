@@ -287,10 +287,10 @@ windowed:
 
 	window_=
 		SDL_CreateWindow(
-			"PanzerChasm",
+			"Chasm: The Rift",
 			SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
 			width, height,
-			( (is_opengl || use_gl_context_for_software_renderer_) ? SDL_WINDOW_OPENGL : 0 ) | ( fullscreen ? SDL_WINDOW_FULLSCREEN : 0 ) | SDL_WINDOW_SHOWN );
+			( (is_opengl || use_gl_context_for_software_renderer_) ? SDL_WINDOW_OPENGL : 0 ) | ( fullscreen ? SDL_WINDOW_FULLSCREEN_DESKTOP : 0 ) | SDL_WINDOW_SHOWN );
 
 	if( window_ == nullptr )
 		Log::FatalError( "Can not create window" );

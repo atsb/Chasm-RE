@@ -163,7 +163,7 @@ void HudDrawerBase::DrawKeysAndStat( const unsigned int x_offset, const char* co
 unsigned int HudDrawerBase::CalculateHudScale( const Size2& viewport_size )
 {
 	// Status bu must have size 10% of screen height or smaller.
-	const float c_y_relative_statusbar_size= 1.0f / 10.0f;
+	const float c_y_relative_statusbar_size= 2.0f / 10.0f;
 
 	float scale_f=
 		std::min(

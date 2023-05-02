@@ -66,7 +66,7 @@ static DifficultyType DifficultyNumberToDifficulty( const unsigned int n )
 
 Host::Host( const int argc, const char* const* const argv )
 	: program_arguments_( argc, argv )
-	, settings_( "PanzerChasm.cfg" )
+	, settings_( "Chasm.cfg" )
 	, commands_processor_( settings_ )
 {
 	{ // Register host commands
@@ -86,7 +86,7 @@ Host::Host( const int argc, const char* const* const argv )
 		commands_processor_.RegisterCommands( host_commands_ );
 	}
 
-	base_window_title_= "PanzerChasm";
+	base_window_title_= "Chasm: The Rift";
 
 	{
 		Log::Info( "Read game archive" );

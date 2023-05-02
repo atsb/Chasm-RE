@@ -21,7 +21,7 @@ using namespace ChasmReverse;
 namespace PanzerChasm
 {
 
-const char SaveHeader::c_expected_id[8]= "PanChSv"; // PanzerChasmSave
+const char SaveHeader::c_expected_id[8]= "ChasmSv"; // ChasmSave
 
 static unsigned int g_crc_table[256u];
 
@@ -114,7 +114,7 @@ bool LoadData(
 
 	if( std::memcmp( header.id, header.c_expected_id, sizeof(header.id) ) != 0 )
 	{
-		Log::Warning( "Save file is not a PanzerChasm save." );
+		Log::Warning( "Save file is not a Chasm save." );
 		std::fclose(f);
 		return false;
 	}

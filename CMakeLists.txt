@@ -1,8 +1,8 @@
-cmake_minimum_required(VERSION 3.1)
+cmake_minimum_required(VERSION 3.15)
 
-project(Chasm-Reverse)
+project(Chasm-RE)
 
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 17)
 
 if(MSVC)
 	set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} /D _CRT_SECURE_NO_WARNINGS /MP")
@@ -57,7 +57,7 @@ if(WIN32)
 		ws2_32
 	)
 	set(CHASM_RESOURCES
-		res/PanzerChasm.rc
+		res/Chasm-RE.rc
 	)
 else()
 	set(CHASM_LIBS
@@ -69,8 +69,8 @@ endif()
 # Configure executable
 
 
-add_executable(PanzerChasm ${CHASM_SOURCES} ${CHASM_HEADERS} ${CHASM_RESOURCES})
-target_link_libraries(PanzerChasm ${CHASM_LIBS})
+add_executable(Chasm-RE ${CHASM_SOURCES} ${CHASM_HEADERS} ${CHASM_RESOURCES})
+target_link_libraries(Chasm-RE ${CHASM_LIBS})
 
 if(BUILD_TOOLS)
 file(GLOB_RECURSE COMMON_FILES src/common/files.*) 
